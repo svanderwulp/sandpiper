@@ -1,0 +1,14 @@
+[Unit]
+Description="Sandpiper Simulation"
+After=network.target
+
+[Service]
+Type=simple
+User=bas
+Group=bas
+WorkingDirectory=/home/bas/projects/pipeline
+ExecStart=/home/bas/projects/pipeline/run_sandpiper_sim.sh
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
